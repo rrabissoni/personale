@@ -36,21 +36,23 @@
             $.each(demoData, function(key, val) {
                if(key == 'features') {
                  $.each(val[0], function(key2, val2) {
-                   console.log('key: '+ key2);
-                   console.log('value: '+ val2);
+                   var timeAr2;
+                   var valueAr2;
 
 
                    if(key2 == 'properties') {
                      $.each(val2, function(key3, val3) {
                        if(key3 == 'time') {
-                         timeAr = val3;
+                         timeAr2 = val3;
                        }
                        if(key3 == 'value') {
-                         valueAr = val3;
+                         valueAr2 = val3;
                        }
                      })
                      console.log('TEMPO: '+ timeAr);
                      console.log('VALORE: '+ valueAr);
+                     timeAr = timeAr2;
+                     valueAr = valueAr2;
                    }
                  })
                }
