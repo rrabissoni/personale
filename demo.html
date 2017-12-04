@@ -33,28 +33,37 @@
             };
 
             $.each(demoData, function(key, val) {
-              if(key == 'features') {
-                $.each(val[0], function(key2, val2) {
-                  console.log('key: '+ key2);
-                  console.log('value: '+ val2);
+               if(key == 'features') {
+                 $.each(val[0], function(key2, val2) {
+                   console.log('key: '+ key2);
+                   console.log('value: '+ val2);
+                   var timeAr;
+                   var valueAr;
 
-                  if(key2 == 'properties') {
-                    $.each(val2, function(key3, val3) {
-                      if(key3 == 'time') {
-                        var timeAr = val3.split(",");
-                      }
-                      if(key3 == 'value') {
-                        var valueAr = val3.split(",");
-                      }
-                    })
-                    console.log('time: '+ timeAr);
-                    console.log('value: '+ valueAr);
-                  }
-                })
-              }
-              //console.log('time: '+ val.features[0].properties.time);
-              //console.log('value: '+ val.features[0].properties.value);
-            });
+                   if(key2 == 'properties') {
+                     $.each(val2, function(key3, val3) {
+                       if(key3 == 'time') {
+                         timeAr = val3;
+                       }
+                       if(key3 == 'value') {
+                         valueAr = val3;
+                       }
+                     })
+                     console.log('TEMPO: '+ timeAr);
+                     console.log('VALORE: '+ valueAr);
+                   }
+                 })
+               }
+
+               var inputAr;
+               for (var i=0; i<timeAr.length; i++) {
+                 var tempAr = array(timeAr[i], valueAr[i]);
+                 inputAr.push(tempAr);
+               }
+               console.log('DEFINITIVO: '+ inputAr);
+               //console.log('value: '+ val.features[0].properties.value);
+             });
+
 
             var datasets = {
                 "usa": {
