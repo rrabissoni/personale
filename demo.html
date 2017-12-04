@@ -35,13 +35,16 @@
             $.each(demoData, function(key, val) {
               if(key == 'features') {
                 $.each(val[0], function(key2, val2) {
+                  console.log('key: '+ key2);
+                  console.log('value: '+ val2);
+                  /*
                   if(key2 == 'properties') {
                     $.each(val2[0], function(key3, val3) {
                        console.log('key: '+ key3);
                        console.log('value: '+ val3);
-                    });
-                  }
-                });
+                    })
+                  }*/
+                })
               }
               //console.log('time: '+ val.features[0].properties.time);
               //console.log('value: '+ val.features[0].properties.value);
