@@ -31,14 +31,14 @@
                     }
                 }]
             };
-
+            var timeAr;
+            var valueAr;
             $.each(demoData, function(key, val) {
                if(key == 'features') {
                  $.each(val[0], function(key2, val2) {
                    console.log('key: '+ key2);
                    console.log('value: '+ val2);
-                   var timeAr;
-                   var valueAr;
+
 
                    if(key2 == 'properties') {
                      $.each(val2, function(key3, val3) {
