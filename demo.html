@@ -14,7 +14,7 @@
 
             var demoData = {
                 "type": "FeatureCollection",
-                "features": [{
+                "features": {
                     "type": "Feature",
                     "properties": {
                         "type": "radon time-series",
@@ -29,12 +29,13 @@
                         "type": "Point",
                         "coordinates": [30.4041, 40.70788]
                     }
-                }]
+                }
             };
 
             $.each(demoData, function(key, val) {
-              console.log('time: '+ key);
-              console.log('value: '+ val);
+              if(key == 'features') {
+                console.log('value: '+ val.time);
+              }
               //console.log('time: '+ val.features[0].properties.time);
               //console.log('value: '+ val.features[0].properties.value);
             });
