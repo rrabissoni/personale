@@ -160,8 +160,6 @@
                                     valueAr2 = val3;
                                 }
                             })
-                            //console.log('TEMPO: ' + timeAr2);
-                            //console.log('VALORE: ' + valueAr2);
                             timeAr = timeAr2;
                             valueAr = valueAr2;
                         }
@@ -170,18 +168,16 @@
 
             });
 
-            //console.log('TEMPO 3: ' + timeAr);
-            //console.log('VALORE 3: ' + valueAr);
             var inputAr = [];
             for (var i = 0; i < timeAr.length; i++) {
                 var unixTstamp = new Date(timeAr[i]);
                 unixTstamp = unixTstamp.getTime();
-                console.log(timeAr[i] + ' - ' + unixTstamp);
+                if (i % 30 == 0)
+                  console.log(i);
+                  
                 var tempAr = [unixTstamp, valueAr[i]];
                 inputAr.push(tempAr);
             }
-            //console.log('DEFINITIVO: ' + inputAr);
-            //console.log('value: '+ val.features[0].properties.value);
 
             var datasets = {
                 "usa": {
