@@ -177,7 +177,7 @@
                 var unixTstamp = new Date(timeAr[i]);
                 unixTstamp = unixTstamp.getTime();
                 console.log(timeAr[i] + ' - ' + unixTstamp);
-                var tempAr = [timeAr[i], valueAr[i]];
+                var tempAr = [unixTstamp, valueAr[i]];
                 inputAr.push(tempAr);
             }
             //console.log('DEFINITIVO: ' + inputAr);
