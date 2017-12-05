@@ -274,7 +274,8 @@
                 xaxis: {
                     mode: "time",
                     timeformat: "%d/%m/%Y %H:%M"
-                }
+                },
+                colors: ['#0000ff']
             });
 
             $.plot("#placeholder2", [{ label: "KARR", data: inputAr_bis }], {
@@ -282,11 +283,9 @@
                     mode: "time",
                     timeformat: "%d/%m/%Y %H:%M"
                 },
-                grid: {
-                  borderColor: '#EDEDED',
-                  backgroundColor: '#F00'
-                }
+                colors: ['#ff0000']
             });
+
         });
     </script>
 </head>
@@ -295,7 +294,7 @@
 
 
     <div id="header">
-        <h2>Toggling Series & Time Axes</h2>
+        <h2>Demo graphs for EPOS GUI</h2>
     </div>
 
     <div id="content">
