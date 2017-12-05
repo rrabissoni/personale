@@ -277,10 +277,14 @@
                 }
             });
 
-            $.plot("#placeholder2", [{ label: "KARR", data: inputAr_bis }]], {
+            $.plot("#placeholder2", [{ label: "KARR", data: inputAr_bis }], {
                 xaxis: {
                     mode: "time",
                     timeformat: "%d/%m/%Y %H:%M"
+                },
+                grid: {
+                  borderColor: '#EDEDED',
+                  backgroundColor: '#F00'
                 }
             });
         });
