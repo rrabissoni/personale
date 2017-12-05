@@ -174,9 +174,8 @@
             //console.log('VALORE 3: ' + valueAr);
             var inputAr = [];
             for (var i = 0; i < timeAr.length; i++) {
-                //var unixTstamp = new Date(timeAr[i]);
-                var unixTstamp = new Date.now().getUnixTime();
-                unixTstamp = unixTstamp.getUnixTime();
+                var unixTstamp = new Date(timeAr[i]);
+                unixTstamp = unixTstamp.getTime();
                 console.log(timeAr[i] + ' - ' + unixTstamp);
                 var tempAr = [timeAr[i], valueAr[i]];
                 inputAr.push(tempAr);
