@@ -391,8 +391,8 @@
                             min: 0
                         },
                         xaxis: {
-                            tickDecimals: 0,
-                            mode: "time"
+                            mode: "time",
+                            timeformat: "%d/%m/%Y %H:%M"
                         }
                     });
                 }
@@ -406,7 +406,8 @@
 
             $.plot("#placeholder", [d], {
                 xaxis: {
-                    mode: "time"
+                    mode: "time",
+                    timeformat: "%d/%m/%Y %H:%M"
                 }
             });
         });
