@@ -175,11 +175,14 @@
             var inputAr4 = [];
             var inputAr5 = [];
 
-            for (var i = 0; i < timeAr.length; i++) {
+            //for (var i = 0; i < timeAr.length; i++) {
+            for (var i = 0; i < 50; i++) {
                 var unixTstamp = new Date(timeAr[i]);
                 unixTstamp = unixTstamp.getTime();
 
-                var tempAr = [unixTstamp, valueAr[i]];
+                //var tempAr = [unixTstamp, valueAr[i]];
+                var randNum = Math.floor(Math.random() * 100) + 1;
+                var tempAr = [unixTstamp, randNum];
 
                 switch (i%6) {
                   case 0:
