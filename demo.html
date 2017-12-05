@@ -168,6 +168,7 @@
 
             });
 
+            var inputAr  = [];
             var inputAr0 = [];
             var inputAr1 = [];
             var inputAr2 = [];
@@ -176,13 +177,15 @@
             var inputAr5 = [];
 
             //for (var i = 0; i < timeAr.length; i++) {
-            for (var i = 0; i < 50; i++) {
+            for (var i = 0; i < 100; i++) {
                 var unixTstamp = new Date(timeAr[i]);
                 unixTstamp = unixTstamp.getTime();
 
                 var randNum = Math.floor(Math.random() * 100) + 1;
                 //var tempAr = [unixTstamp, randNum];
                 var tempAr = [unixTstamp, valueAr[i]];
+
+                inputAr.push(tempAr);
 
                 switch (i%6) {
                   case 0:
@@ -289,7 +292,7 @@
 
             ///////////////////////////////////
 
-            var d = inputAr0;
+            var d = inputAr;
 
             $.plot("#placeholder", [d], {
                 xaxis: {
@@ -315,37 +318,20 @@
             <p id="choices" style="float:right; width:135px;"></p>
         </div>
 
-        <p>This example shows military budgets for various countries in constant (2005) million US dollars (source: <a href="http://www.sipri.org/">SIPRI</a>).</p>
+        <p>This example is an interactive plot. You can turn options on and off with the checkboxes next to the plot.</p>
 
-        <p>Since all data is available client-side, it's pretty easy to make the plot interactive. Try turning countries on and off with the checkboxes next to the plot.</p>
-
+        <hr />
 
         <div class="demo-container">
             <div id="placeholder" class="demo-placeholder"></div>
         </div>
 
-        <p>Monthly mean atmospheric CO<sub>2</sub> in PPM at Mauna Loa, Hawaii (source: <a href="http://www.esrl.noaa.gov/gmd/ccgg/trends/">NOAA/ESRL</a>).</p>
-
-        <p>If you tell Flot that an axis represents time, the data will be interpreted as timestamps and the ticks adjusted and formatted accordingly.</p>
-
-        <p>Zoom to: <button id="whole">Whole period</button>
-            <button id="nineties">1990-2000</button>
-            <button id="latenineties">1996-2000</button></p>
-
-        <p>Zoom to: <button id="ninetyninequarters">1999 by quarter</button>
-            <button id="ninetynine">1999 by month</button>
-            <button id="lastweekninetynine">Last week of 1999</button>
-            <button id="lastdayninetynine">Dec. 31, 1999</button></p>
-
-        <p>The timestamps must be specified as Javascript timestamps, as milliseconds since January 1, 1970 00:00. This is like Unix timestamps, but in milliseconds instead of seconds (remember to multiply with 1000!).</p>
-
-        <p>As an extra caveat, the timestamps are interpreted according to UTC and, by default, displayed as such. You can set the axis "timezone" option to "browser" to display the timestamps in the user's timezone, or, if you use timezoneJS, you can specify
-            a time zone.</p>
+        <p>Plot representing a generic value trend (y axis) over an time interval (x axis)</p>
 
     </div>
 
     <div id="footer">
-        Copyright &copy; 2007 - 2014 IOLA and Ole Laursen
+        &copy; INGV EPOS team 
     </div>
 
 </body>
