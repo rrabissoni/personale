@@ -160,8 +160,8 @@
                                     valueAr2 = val3;
                                 }
                             })
-                            console.log('TEMPO: ' + timeAr2);
-                            console.log('VALORE: ' + valueAr2);
+                            //console.log('TEMPO: ' + timeAr2);
+                            //console.log('VALORE: ' + valueAr2);
                             timeAr = timeAr2;
                             valueAr = valueAr2;
                         }
@@ -170,14 +170,17 @@
 
             });
 
-            console.log('TEMPO 3: ' + timeAr);
-            console.log('VALORE 3: ' + valueAr);
+            //console.log('TEMPO 3: ' + timeAr);
+            //console.log('VALORE 3: ' + valueAr);
             var inputAr = [];
             for (var i = 0; i < timeAr.length; i++) {
+                var unixTstamp = new Date(timeAr[i]);
+                unixTstamp = unixTstamp.getUnixTime();
+                console.log(timeAr[i] + ' - ' + unixTstamp);
                 var tempAr = [timeAr[i], valueAr[i]];
                 inputAr.push(tempAr);
             }
-            console.log('DEFINITIVO: ' + inputAr);
+            //console.log('DEFINITIVO: ' + inputAr);
             //console.log('value: '+ val.features[0].properties.value);
 
             var datasets = {
@@ -993,7 +996,7 @@
             ];
 
             d = inputAr;
-            
+
             $.plot("#placeholder", [d], {
                 xaxis: {
                     mode: "time"
