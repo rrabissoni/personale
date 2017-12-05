@@ -94,7 +94,6 @@
                         var timeAr2;
                         var valueAr2;
 
-
                         if (key2 == 'properties') {
                             $.each(val2, function(key3, val3) {
                                 if (key3 == 'time') {
@@ -271,14 +270,14 @@
 
             ///////////////////////////////////
 
-            $.plot("#placeholder", [inputAr], {
+            $.plot("#placeholder", [{ label: "ARMR", data: inputAr }], {
                 xaxis: {
                     mode: "time",
                     timeformat: "%d/%m/%Y %H:%M"
                 }
             });
 
-            $.plot("#placeholder2", [inputAr_bis], {
+            $.plot("#placeholder2", [{ label: "KARR", data: inputAr_bis }]], {
                 xaxis: {
                     mode: "time",
                     timeformat: "%d/%m/%Y %H:%M"
