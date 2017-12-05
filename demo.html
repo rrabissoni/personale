@@ -168,14 +168,44 @@
 
             });
 
-            var inputAr = [];
+            var inputAr0 = [];
+            var inputAr1 = [];
+            var inputAr2 = [];
+            var inputAr3 = [];
+            var inputAr4 = [];
+            var inputAr5 = [];
+
             for (var i = 0; i < timeAr.length; i++) {
                 var unixTstamp = new Date(timeAr[i]);
                 unixTstamp = unixTstamp.getTime();
-                if (i % 30 == 0) {
-                  console.log(i);
-                  var tempAr = [unixTstamp, valueAr[i]];
-                  inputAr.push(tempAr);
+
+                var tempAr = [unixTstamp, valueAr[i]];
+
+                switch (i%6) {
+                  case 0:
+                    inputAr0.push(tempAr);
+                    break;
+
+                  case 1:
+                    inputAr1.push(tempAr);
+                    break;
+
+                  case 2:
+                    inputAr2.push(tempAr);
+                    break;
+
+                  case 3:
+                    inputAr3.push(tempAr);
+                    break;
+
+                  case 4:
+                    inputAr2.push(tempAr);
+                    break;
+
+                  case 5:
+                    inputAr3.push(tempAr);
+                    break;
+
                 }
             }
 
