@@ -180,9 +180,9 @@
                 var unixTstamp = new Date(timeAr[i]);
                 unixTstamp = unixTstamp.getTime();
 
-                //var tempAr = [unixTstamp, valueAr[i]];
                 var randNum = Math.floor(Math.random() * 100) + 1;
-                var tempAr = [unixTstamp, randNum];
+                //var tempAr = [unixTstamp, randNum];
+                var tempAr = [unixTstamp, valueAr[i]];
 
                 switch (i%6) {
                   case 0:
