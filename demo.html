@@ -172,11 +172,11 @@
             for (var i = 0; i < timeAr.length; i++) {
                 var unixTstamp = new Date(timeAr[i]);
                 unixTstamp = unixTstamp.getTime();
-                if (i % 30 == 0)
+                if (i % 30 == 0) {
                   console.log(i);
-                  
-                var tempAr = [unixTstamp, valueAr[i]];
-                inputAr.push(tempAr);
+                  var tempAr = [unixTstamp, valueAr[i]];
+                  inputAr.push(tempAr);
+                }
             }
 
             var datasets = {
