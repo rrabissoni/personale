@@ -3,7 +3,7 @@
 
 <head>
     <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
-    <script src="jquery.js"></script>
+    <!-- script src="jquery.js"></script-->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
     <!-- Make sure you put this AFTER Leaflet's CSS -->
 
@@ -14,12 +14,19 @@
         }
     </style>
 
+
+</head>
+
+<body>
+
+    <div id="mapid"></div>
+
     <script>
         function onMapClick(e) {
             alert("You clicked the map at " + e.latlng);
         }
 
-        $(document).ready(function() {
+        //$(document).ready(function() {
             var mymap = L.map('mapid').setView([42, 12], 13);
 
             var marker = L.marker([51.5, -0.09]).addTo(mymap);
@@ -38,15 +45,8 @@
 
             mymap.on('click', onMapClick);
 
-        })
+        //})
     </script>
-
-</head>
-
-<body>
-
-    <div id="mapid"></div>
-
 
 </body>
 
