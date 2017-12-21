@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "Interferograms",
+        "Product Type": "WRAPPED_INTERFEROGRAM",
+        "Date": "2017-06-21T18:09:22.0000000Z/2017-06-27T18:10:05.0000000Z",
+        "url": "https://zenodo.org/record/61263/files/fr.dat_15082016S1A_27082016S1A_GEO_4246x2456.png"
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            142.3744507,
+            -3.0863888
+          ],
+          [
+            145.1524508,
+            -5.927389
+          ]
+        ]
+      }
+    }
+  ]
+}
