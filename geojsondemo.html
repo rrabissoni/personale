@@ -44,7 +44,7 @@
                 attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(mymap);
 
-            // POINTS REPRESENTATION
+            // SPINTO'S POINTS REPRESENTATION
             var geoJsonLayer;
             var geoJsonFeature;
 
@@ -57,7 +57,7 @@
                 });
 
             geoJsonLayer = L.geoJSON(geoJsonFeature, {onEachFeature: onEachFeature}).addTo(mymap);
-            // END OF POINTS REPRESENTATION
+            // END OF SPINTO'S POINTS REPRESENTATION
 
             // INTERFEROGRAM REPRESENTATION
             var interferogramLayer;
@@ -140,8 +140,11 @@
 
             $('.leaflet-control-layers-overlays label').each(function(){
               console.log(this);
-            })
+            });
 
+            mymap.on('click', function(e){
+              console.log(e.layer);
+            });
         })
     </script>
 
