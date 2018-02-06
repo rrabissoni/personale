@@ -57,7 +57,7 @@
                     geoJsonFeature = response;
                 });
 
-            //geoJsonLayer = L.geoJSON(geoJsonFeature, {onEachFeature: onEachFeature}).addTo(mymap);
+            geoJsonLayer = L.geoJSON(geoJsonFeature, {onEachFeature: onEachFeature}).addTo(mymap);
             // END OF POINTS REPRESENTATION
 
             // INTERFEROGRAM REPRESENTATION
@@ -130,14 +130,14 @@
 
 
             var overlayMaps = {
-                //"Stations": geoJsonLayer,
+                "Stations": geoJsonLayer,
                 //"Interferograms": interferogramLayer,
                 //"WFS": boundaries,
                 "WMS": tileLayerWMS
             };
 
             L.control.layers(null, overlayMaps).addTo(mymap);
-            L.control.sliderControl({position: "topright", layer: tileLayerWMS}).addTo(mymap);
+            //L.control.sliderControl({position: "topright", layer: tileLayerWMS}).addTo(mymap);
 
         })
     </script>
