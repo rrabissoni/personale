@@ -35,7 +35,6 @@
                 }
             }
 
-
             var mymap = L.map('mapid', {
                 'center': [41.828088, 12.515471],
                 'zoom': 8
@@ -138,6 +137,10 @@
 
             L.control.layers(null, overlayMaps).addTo(mymap);
             //L.control.sliderControl({position: "topright", layer: tileLayerWMS}).addTo(mymap);
+
+            $('.leaflet-control-layers-overlays label').each(function(){
+              console.log(this);
+            })
 
         })
     </script>
