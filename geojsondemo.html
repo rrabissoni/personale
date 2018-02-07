@@ -139,12 +139,14 @@
             //L.control.sliderControl({position: "topright", layer: tileLayerWMS}).addTo(mymap);
 
             $('.leaflet-control-layers-overlays label').each(function(){
-              console.log(this);
+              //console.log(this);
             });
 
-            mymap.on('click', function(e){
-              console.log(e.layer);
+            mymap.eachLayer(function (layer) {
+                console.log(this);
             });
+
+            
         })
     </script>
 
