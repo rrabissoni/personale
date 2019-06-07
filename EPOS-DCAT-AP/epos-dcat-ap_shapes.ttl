@@ -1671,13 +1671,11 @@ epos:PeriodOfTimeShape
   sh:property [
       sh:path schema:endDate ;
       sh:maxCount 1 ;
-      sh:severity sh:Violation ;
       sh:node epos:DateOrDateTimeDataType ;
     ] ;
   sh:property [
       sh:path schema:startDate ;
       sh:maxCount 1 ;
-      sh:severity sh:Violation ;
       sh:node epos:DateOrDateTimeDataType ;
     ] ;
 .
