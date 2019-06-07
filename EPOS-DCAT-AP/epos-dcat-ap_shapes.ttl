@@ -96,6 +96,10 @@ schema:ContactPoint a owl:Class;
     owl:equivalentClass vcard:Kind;
     rdfs:label "ContactPoint"@en;
 .
+
+
+
+
 ####
 # Properties
 ####
@@ -205,7 +209,7 @@ epos:DateOrDateTimeDataType
   sh:description "It checks that a datatype property receives a date or a dateTime literal"@en  ;
   sh:message "The values must be data typed as either xsd:date or xsd:dateTime"@en  ;
   sh:or ( [ sh:datatype xsd:date ; ]
-             [ sh:datatype xsd:dateTime ; ] ) ;
+          [ sh:datatype xsd:dateTime ; ] ) ;
 .
 epos:ContactPointType
   a sh:NodeShape ;
@@ -1652,5 +1656,22 @@ epos:SoftwareSourceCodeShape
     sh:property [
       sh:path schema:programmingLanguage;
       sh:datatype xsd:string ;
+    ] ;
+.
+#####
+
+dct:PeriodOfTime
+rdf:type sh:NodeShape ;
+  sh:property [
+      sh:path schema:endDate ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:node epos:DateOrDateTimeDataType ;
+    ] ;
+  sh:property [
+      sh:path schema:startDate ;
+      sh:maxCount 1 ;
+      sh:severity sh:Violation ;
+      sh:node epos:DateOrDateTimeDataType ;
     ] ;
 .
