@@ -1658,10 +1658,16 @@ epos:SoftwareSourceCodeShape
       sh:datatype xsd:string ;
     ] ;
 .
+
+
+#####
+# Last changes for Metadata Editor Scope
 #####
 
-dct:PeriodOfTime
-rdf:type sh:NodeShape ;
+
+epos:PeriodOfTimeShape
+  a sh:NodeShape ;
+  sh:targetClass dct:PeriodOfTime;
   sh:property [
       sh:path schema:endDate ;
       sh:maxCount 1 ;
