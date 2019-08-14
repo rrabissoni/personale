@@ -203,14 +203,6 @@ epos:resolution
 # SHACL Shapes Graphs
 ####
 
-epos:DateOrDateTimeDataType
-  a sh:NodeShape ;
-  sh:description "It checks that a datatype property receives a date or a dateTime literal"@en  ;
-  sh:message "The values must be data typed as either xsd:date or xsd:dateTime"@en  ;
-  sh:or ( [ sh:datatype xsd:date ; ]
-             [ sh:datatype xsd:dateTime ; ] ) ;
-.
-
 epos:PersonShape
   a sh:NodeShape ;
   sh:targetClass schema:Person;
